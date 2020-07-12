@@ -1,9 +1,9 @@
 node_modules
-webpack.config.js
-.babelrc
-.package.json
-.package-lock.json
-*.jpg
 *.png
+*.jpg
 *.jpeg
 dist
+.babelrc
+package.json
+package-lock.json
+webpack.config.js

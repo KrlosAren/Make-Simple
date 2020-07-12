@@ -5,12 +5,14 @@ const btnSearch = document.getElementById('btnSearch')
 const inputSearch = document.querySelector('.search__input')
 const searchContainer = document.querySelector('.search__container')
 
-btnSearch.onclick = () => {
-  inputSearch.classList.toggle('active')
-  btnSearch.classList.toggle('active')
-  
-}
+btnSearch.addEventListener('click', () => {
+  inputSearch.style.animationName = 'size'
+  searchContainer.style.animationName = 'move'
 
-inputSearch.addEventListener('repeatEvent', () => {
-  console.log('hola')
+  searchContainer.addEventListener('animationend', (eventTwo) => {
+    if (eventTwo.animationName === 'move') {
+      inputSearch.style.animationName = 'resize'
+    }
+  })
 })
+
