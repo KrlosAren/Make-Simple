@@ -5,8 +5,7 @@ const btnSearch = document.getElementById('btnSearch')
 const inputSearch = document.querySelector('.search__input')
 const searchContainer = document.querySelector('.search__container')
 
-
-btnSearch.onclick = () => {
+btnSearch.addEventListener('click', () => {
   inputSearch.style.animationName = 'size'
   searchContainer.style.animationName = 'move'
 
@@ -15,4 +14,5 @@ btnSearch.onclick = () => {
       inputSearch.style.animationName = 'resize'
     }
   })
-}
+})
+
